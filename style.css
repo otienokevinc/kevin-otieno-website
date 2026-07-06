@@ -250,3 +250,34 @@ body.dark-mode .article-body a{color:var(--blue-signal);}
 nav.links a{text-transform:uppercase; font-size:12.5px; letter-spacing:0.06em; font-weight:500;}
 .site-nav{box-shadow:0 1px 0 rgba(0,0,0,0.3);}
 .nav-inner{padding:16px 24px;}
+
+/* ===== SHARE BAR ===== */
+.share-bar{max-width:720px; margin:0 auto; padding:28px 24px; border-top:1px solid var(--blue-border); border-bottom:1px solid var(--blue-border); display:flex; align-items:center; gap:18px; flex-wrap:wrap;}
+.share-label{font-family:'IBM Plex Mono', monospace; font-size:12px; letter-spacing:0.06em; color:var(--ink-soft); text-transform:uppercase;}
+.share-links{display:flex; gap:10px; flex-wrap:wrap;}
+.share-links a{font-family:'Inter', sans-serif; font-size:13px; font-weight:500; color:var(--blue-steel); border:1px solid var(--blue-border); padding:7px 14px; border-radius:2px; transition:border-color .15s ease, color .15s ease;}
+.share-links a:hover{border-color:var(--blue-signal); color:var(--blue-signal);}
+
+/* ===== COMMENTS (Giscus) ===== */
+.comments-section{max-width:720px; margin:0 auto; padding:40px 24px 20px;}
+.comments-section .eyebrow{font-family:'IBM Plex Mono', monospace; font-size:12px; letter-spacing:0.06em; color:var(--blue-steel); text-transform:uppercase; margin-bottom:16px; display:block;}
+
+/* ===== CATEGORY TAG + READ TIME (CDH-style meta row) ===== */
+.article-meta-row{display:flex; align-items:center; gap:14px; flex-wrap:wrap; margin-top:18px; font-family:'IBM Plex Mono', monospace; font-size:12px;}
+.category-tag{background:var(--navy-panel); color:var(--gold); border:1px solid var(--blue-border); padding:5px 12px; border-radius:2px; letter-spacing:0.04em; text-transform:uppercase;}
+.read-time{color:#93A6BA;}
+.meta-dot{color:var(--blue-border);}
+
+/* ===== PDF / PRINT BUTTON ===== */
+.pdf-btn{font-family:'Inter', sans-serif; font-size:13px; font-weight:500; color:var(--blue-steel); border:1px solid var(--blue-border); padding:7px 14px; border-radius:2px; background:none; cursor:pointer; transition:border-color .15s ease, color .15s ease;}
+.pdf-btn:hover{border-color:var(--blue-signal); color:var(--blue-signal);}
+
+@media print{
+  .site-nav, .ticker-wrap, .credentials, .share-bar, .comments-section, footer, .theme-toggle{display:none !important;}
+  .article-hero{background:#fff !important; color:#000 !important; border:none !important;}
+  .article-hero h1{color:#000 !important;}
+  .byline-date, .article-byline{color:#333 !important;}
+  .article-body p{color:#000 !important;}
+  .article-featured-image img{height:auto !important;}
+  body{background:#fff !important;}
+}
