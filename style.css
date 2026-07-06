@@ -274,10 +274,32 @@ nav.links a{text-transform:uppercase; font-size:12.5px; letter-spacing:0.06em; f
 
 @media print{
   .site-nav, .ticker-wrap, .credentials, .share-bar, .comments-section, footer, .theme-toggle{display:none !important;}
-  .article-hero{background:#fff !important; color:#000 !important; border:none !important;}
-  .article-hero h1{color:#000 !important;}
-  .byline-date, .article-byline{color:#333 !important;}
+  .article-hero{background:#fff !important; color:#000 !important; border:none !important; padding:0 0 16px 0 !important; page-break-after:avoid;}
+  .article-hero-inner{padding:0 !important;}
+  .article-hero h1{color:#000 !important; font-size:22pt !important; margin-bottom:8px !important;}
+  .byline-block{margin-top:10px !important;}
+  .byline-photo{width:34px !important; height:34px !important;}
+  .byline-date, .article-byline{color:#333 !important; font-size:9pt !important;}
+  .article-meta-row{margin-top:8px !important;}
   .article-body p{color:#000 !important;}
-  .article-featured-image img{height:auto !important;}
+  .article-featured-image{page-break-before:avoid; page-break-inside:avoid; padding:0 0 6px 0 !important; margin-top:6px !important;}
+  .article-featured-image img{
+    height:2.6in !important;
+    max-height:2.6in !important;
+    width:70% !important;
+    max-width:70% !important;
+    object-fit:cover !important;
+    display:block !important;
+    margin:0 auto !important;
+  }
+  .image-caption{text-align:center !important; margin-top:6px !important;}
+  .article-body{page-break-before:avoid;}
+  .article-body h3{page-break-after:avoid;}
+  .article-body p{page-break-inside:avoid;}
+  .article-bio-box{page-break-inside:avoid;}
   body{background:#fff !important;}
 }
+
+/* ===== NEWSPAPER-STYLE PULL QUOTE ===== */
+blockquote.pull-quote{border-left:3px solid var(--gold); margin:32px 0; padding:4px 0 4px 24px; font-family:'Source Serif 4', serif; font-size:21px; font-style:italic; line-height:1.5; color:var(--ink);}
+blockquote.pull-quote cite{display:block; margin-top:10px; font-family:'IBM Plex Mono', monospace; font-size:12.5px; font-style:normal; color:var(--ink-soft); letter-spacing:0.02em;}
