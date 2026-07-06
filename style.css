@@ -237,7 +237,7 @@ body.dark-mode .article-body a{color:var(--blue-signal);}
 
 /* ===== ARTICLE FEATURED IMAGE ===== */
 .article-featured-image{max-width:800px; margin:0 auto; padding:0 24px;}
-.article-featured-image img{width:100%; height:auto; display:block; border-radius:2px; margin-top:8px;}
+.article-featured-image img{width:100%; height:420px; object-fit:cover; display:block; border-radius:2px; margin-top:8px;}
 .image-caption{font-family:'IBM Plex Mono', monospace; font-size:11.5px; color:var(--ink-soft); margin-top:10px; text-align:right;}
 .image-caption a{color:var(--blue-steel);}
 
